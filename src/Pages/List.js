@@ -6,8 +6,16 @@ class List extends Component {
     }
     render() {
         return (
-            <h2>List_page</h2>
+            <h2>List_page->{this.state.id}</h2>
         );
+    }
+
+    componentDidMount(){
+        console.log(this.props)
+        let tempId=this.props.match.params.id
+        this.setState({
+            id:tempId
+        })
     }
 }
 
